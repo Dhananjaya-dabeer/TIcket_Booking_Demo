@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const errorHandler = async(message, status) => {
+export const errorHandler = async(message, status=500) => {
    const error = new Error()
    error.message = message
    error.statusCode = status
